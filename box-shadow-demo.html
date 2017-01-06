@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>box-shadow</title>
+	<style type="text/css">
+	p,div{
+		margin:0px;
+		border:none;
+		padding:0px;
+	}
+	h1,h3{
+		text-align:center;
+	}
+	.main{
+		display: -webkit-flex;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.box{
+		width:150px;
+		height:150px;
+		margin:50px;
+		background: #ccc;
+		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		align-content:center;
+		justify-content: center;
+	}
+	.border{
+		border:5px solid #ff0;
+	}
+
+	.shadow_1{
+		-moz-box-shadow:5px 5px 5px 5px #f33;
+		-webkit-box-shadow:5px 5px 5px 5px #f33;
+		box-shadow: 5px 5px 5px 5px #f33;
+	}
+	.shadow_2{
+		-moz-box-shadow:5px 5px 5px 5px #f33;
+		-webkit-box-shadow:5px 5px 5px 5px #f33;
+		box-shadow:5px 5px 5px 5px #f33;
+	}
+	.shadow_3{
+		-moz-box-shadow: inset 5px 5px 5px 5px #f33;
+		-webkit-box-shadow: inset 5px 5px 5px 5px #f33;
+		box-shadow: inset 5px 5px 5px 5px #f33;
+	}
+	.shadow_4{
+		-moz-box-shadow: 0px 0px 5px 5px #f33;
+		-webkit-box-shadow: 0px 0px 5px 5px #f33;
+		box-shadow: 0px 0px 5px 5px #f33;
+	}
+	.shadow_5{
+		-moz-box-shadow: -5px -5px 5px 5px #f33;
+		-webkit-box-shadow: -5px -5px 5px 5px #f33;
+		box-shadow: -5px -5px 5px 5px #f33;
+	}
+	.shadow_6{
+		-moz-box-shadow:0px 0px 5px 5px #f33;
+		-webkit-box-shadow:0px 0px 5px 5px #f33;
+		box-shadow:0px 0px 5px 5px #f33;
+	}
+	.shadow_7{
+		-moz-box-shadow:0px 0px 0px 5px #f33;
+		-webkit-box-shadow:0px 0px 0px 5px #f33;
+		box-shadow:0px 0px 0px 5px #f33;
+	}
+	.shadow_8{
+		-moz-box-shadow:0px 0px -5px 5px #f33;
+		-webkit-box-shadow:0px 0px -5px 5px #f33;
+		box-shadow:0px 0px -5px 5px #f33;
+	}
+	.shadow_9{
+		-moz-box-shadow: 0px 0px 5px 0px #f33;
+		-webkit-box-shadow: 0px 0px 5px 0px #f33;
+		box-shadow: 5px 5px 5px 0px #f33;
+	}
+	.shadow_10{
+		-moz-box-shadow: 5px 5px 5px -5px #f33;
+		-webkit-box-shadow: 5px 5px 5px -5px #f33;
+		box-shadow: 5px 5px 5px -5px #f33;
+	}
+	.shadow_11{
+		-moz-box-shadow:inset 0px 0px 5px 5px #f33;
+		-webkit-box-shadow:inset 0px 0px 5px 5px #f33;
+		box-shadow:inset 0px 0px 5px 5px #f33;
+	}
+	.shadow_12{
+		-moz-box-shadow: inset -5px -5px 5px 5px #f33;
+		-webkit-box-shadow: inset -5px -5px 5px 5px #f33;
+		box-shadow: inset -5px -5px 5px 5px #f33;
+	}
+	.shadow_13{
+		-moz-box-shadow:5px 5px 5px 5px #f33;
+		-webkit-box-shadow:5px 5px 5px 5px #f33;
+		box-shadow:5px 5px 5px 5px #f33;
+	}
+	.shadow_14{
+		-moz-box-shadow: inset 5px 5px 5px 5px #f33;
+		-webkit-box-shadow: inset 5px 5px 5px 5px #f33;
+		box-shadow: inset 5px 5px 5px 5px #f33;
+	}
+	.shadow_15{
+		-moz- box-shadow: -5px 0 5px 0 green, /*左边阴影*/
+   		0 -5px 5px 0 blue, /*顶部阴影*/
+   		0 5px 5px 0 red, /*底部阴影*/
+   		5px 0 5px 0 yellow; /*右边阴影*/
+   		-webkit- box-shadow: -5px 0 5px 0 green, /*左边阴影*/
+   		0 -5px 5px 0 blue, /*顶部阴影*/
+   		0 5px 5px 0 red, /*底部阴影*/
+   		5px 0 5px 0 yellow; /*右边阴影*/
+		 box-shadow: -5px 0 5px 0 green, /*左边阴影*/
+   		0 -5px 5px 0 blue, /*顶部阴影*/
+   		0 5px 5px 0 red, /*底部阴影*/
+   		5px 0 5px 0 yellow; /*右边阴影*/
+	}
+	.shadow_16{
+		-moz-box-shadow: -5px 0 5px 0 green inset, /*左边阴影*/
+   		0 -5px 5px 0 blue inset, /*顶部阴影*/
+   		0 5px 5px 0 red inset, /*底部阴影*/
+   		5px 0 5px 0 yellow inset; /*右边阴影*/
+   		-webkit-box-shadow: -5px 0 5px 0 green inset, /*左边阴影*/
+   		0 -5px 5px 0 blue inset, /*顶部阴影*/
+   		0 5px 5px 0 red inset, /*底部阴影*/
+   		5px 0 5px 0 yellow inset; /*右边阴影*/
+		box-shadow: -5px 0 5px 0 green inset, /*左边阴影*/
+   		0 -5px 5px 0 blue inset, /*顶部阴影*/
+   		0 5px 5px 0 red inset, /*底部阴影*/
+   		5px 0 5px 0 yellow inset; /*右边阴影*/
+	}
+	.shadow_17{
+		-moz-box-shadow: 0 0 0 3px #FFFF66,
+		0 0 0 6px #FFCC66,
+		0 0 0 9px #FF9966,
+		0 0 0 12px #FF6666,
+		0 0 0 15px #FF3366	
+		-webkit-box-shadow: 0 0 0 3px #FFFF66,
+		0 0 0 6px #FFCC66,
+		0 0 0 9px #FF9966,
+		0 0 0 12px #FF6666,
+		0 0 0 15px #FF3366	
+		box-shadow: 0 0 0 3px #FFFF66,
+		0 0 0 6px #FFCC66,
+		0 0 0 9px #FF9966,
+		0 0 0 12px #FF6666,
+		0 0 0 15px #FF3366	
+	}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>box-shadow demo</h1>
+	</header>
+	<h2>基础演示</h2>
+	<div class="main">
+		<div>
+			<div class="box shadow_1">
+				<p>x,y 偏移为正数</p>
+				<p>5px 5px 5px 5px #f33</p>
+			</div>
+		</div>
+		<div>
+			<div class="box shadow_4">
+				<p>x,y 偏移为0</p>
+				<p>0px 0px 5px 5px #f33</p>
+			</div>
+		</div>
+		<div>
+			<div class="box shadow_5">
+				<p>x,y 偏移为负数</p>
+				<p>-5px -5px 5px 5px #f33</p>
+			</div>
+		</div>
+		<div>
+			<div class="box shadow_6">
+				<p>模糊值为正数</p>
+				<p>0px 0px 5px 5px #f33</p>
+			</div>
+		</div>
+		<div>
+			<div class="box shadow_7">
+				<p>模糊值为0</p>
+				<p>0px 0px 0px 5px #f33</p>
+			</div>
+		</div>
+		<div>
+			<div class="box shadow_8">
+				<p>模糊值为负数</p>
+				<p><b>(错误的写法)</b></p>
+				<p>0px 0px -5px 5px #f33</p>
+			</div>
+		</div>
+		<div>
+			<div class="box shadow_9">
+				<p>阴影长度为0</p>
+				<p>5px 5px 5px 0px #f33</p>
+			</div>
+		</div>
+		<div>
+			<div class="box shadow_10">
+				<p>阴影长度为负数</p>
+				<p>5px 5px 5px -5px #f33</p>
+			</div>
+		</div>
+		<div>
+			<div class="box shadow_2">
+				<p>阴影长度为正数</p>
+				<p>5px 5px 5px 5px #f33</p>
+			</div>
+		</div>
+		<div>
+			<div class="box shadow_3">
+				<p>内阴影x,y为正数</p>
+				<p>inset 5px 5px 5px 5px #f33</p>
+			</div>
+		</div>
+		<div>
+			<div class="box shadow_11">
+				<p>内阴影x,y为0</p>
+				<p>inset 0px 0px 5px 5px #f33</p>
+			</div>
+		</div>
+		<div>
+			<div class="box shadow_12">
+				p{内阴影x,y为负数}
+				<p>inset -5px -5px 5px 5px #f33</p>
+			</div>
+		</div>
+		<div>
+			<div class="box border shadow_13">
+				<p>有边框的外阴影</p>
+			</div>
+		</div>
+		<div>
+			<div class="box border shadow_14">
+				<p>有边框的内阴影</p>
+			</div>
+		</div>
+	</div>
+	<h2>多重阴影演示</h2>
+	<div class="main">
+		<div>
+			<div class="box shadow_15">
+				 <p>-5px 0 5px 0 green(left)</p>
+   		<p>0 -5px 5px 0 blue(top)</p>
+   		<p>0 5px 5px 0 red(bottom)</p>
+   		<p>5px 0 5px 0 yellow(right)</p>
+			</div>
+		</div>
+		<div>
+			<div class="box shadow_16">
+				<p>-5px 0 5px 0 green inset(left)</p>
+   		<p>0 -5px 5px 0 blue(top) inset</p>
+   		<p>0 5px 5px 0 red(bottom) inset</p>
+   		<p>5px 0 5px 0 yellow(right) inset</p>
+			</div>
+		</div>
+		<div>
+			<div class="box shadow_17">
+				<p>模拟多层边框，渐变边框</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
