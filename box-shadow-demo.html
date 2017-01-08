@@ -111,10 +111,10 @@
    		0 -5px 5px 0 #9900FF, /*顶部阴影*/
    		0 5px 5px 0 #CC00FF, /*底部阴影*/
    		5px 0 5px 0 #FF00FF; /*右边阴影*/
-		 box-shadow: -5px 0 5px 0 #6600FF, /*左边阴影*/
-   		0 -5px 5px 0 #9900FF, /*顶部阴影*/
-   		0 5px 5px 0 #CC00FF, /*底部阴影*/
-   		5px 0 5px 0 #FF00FF; /*右边阴影*/
+		 box-shadow: -5px 0 5px 0 #f00, /*左边阴影*/
+   		0 -5px 5px 0 #0f0, /*顶部阴影*/
+   		0 5px 5px 0 #ff0, /*底部阴影*/
+   		5px 0 5px 0 #f0f; /*右边阴影*/
 	}
 	.shadow_16{
 		-moz-box-shadow: -5px 0 5px 0 #6600FF inset, /*左边阴影*/
@@ -125,10 +125,10 @@
    		0 -5px 5px 0 #9900FF inset, /*顶部阴影*/
    		0 5px 5px 0 #CC00FF inset, /*底部阴影*/
    		5px 0 5px 0 #FF00FF inset; /*右边阴影*/
-		box-shadow: -5px 0 5px 0 #6600FF inset, /*左边阴影*/
-   		0 -5px 5px 0 #9900FF inset, /*顶部阴影*/
-   		0 5px 5px 0 #CC00FF inset, /*底部阴影*/
-   		5px 0 5px 0 #FF00FF inset; /*右边阴影*/
+		box-shadow: 5px 0 5px 0 #f00 inset, /*左边阴影*/
+   		0 5px 5px 0 #0f0 inset, /*顶部阴影*/
+   		0 -5px 5px 0 #ff0 inset, /*底部阴影*/
+   		-5px 0 5px 0 #f0f inset; /*右边阴影*/
 	}
 	.shadow_17{
 		-moz-box-shadow: 0 0 0 3px #FFFF66,
@@ -176,7 +176,7 @@
 					0px 0px 20px rgba(0,0,0,0.1) inset;
 	}
 	.shadow::before,
-	.shadow::after {
+	.shadow::after{
 	   content:"";
 	   position:absolute;
 	   z-index:-1;
@@ -217,10 +217,14 @@
 	    color: #fff;
 	    width: 240px;
 	    height: 50px;
-	    box-shadow: -4px 0 2px rgb(145, 224, 217) inset, /*右边阴影*/ 
-	 4px 0 2px rgb(33, 135, 126) inset, /*左边阴影*/ 
-	 0 -4px 2px rgb(145, 224, 217) inset, /*底边阴影*/ 
-	 0 4px 2px rgb(33, 135, 126) inset;
+/* 	  box-shadow:4px 0 4px rgb(33, 135, 126) inset, 左边阴影
+0 4px 4px rgb(33, 135, 126) inset,
+ 0 -4px 4px rgb(145, 224, 217) inset, 底边阴影
+ -4px 0 4px rgb(145, 224, 217) inset 右边阴影 */
+	  box-shadow: -4px 0 2px rgb(145, 224, 217) inset, /* 右边阴影 */
+	  	 4px 0 2px rgb(33, 135, 126) inset, /* 左边阴影 */
+	  	 0 -4px 2px rgb(145, 224, 217) inset, /* 底边阴影 */
+	  	 0 4px 2px rgb(33, 135, 126) inset;
 	 }
 	</style>
 </head>
@@ -289,16 +293,10 @@
 	<h2>多重阴影演示</h2>
 	<div class="main">
 		<div class="box shadow_15">
-			<p>-5px 0 5px 0 green(left)</p>
-	   		<p>0 -5px 5px 0 blue(top)</p>
-	   		<p>0 5px 5px 0 red(bottom)</p>
-	   		<p>5px 0 5px 0 yellow(right)</p>
+			
 		</div>
 		<div class="box shadow_16">
-			<p>-5px 0 5px 0 green inset(left)</p>
-	   		<p>0 -5px 5px 0 blue(top) inset</p>
-	   		<p>0 5px 5px 0 red(bottom) inset</p>
-	   		<p>5px 0 5px 0 yellow(right) inset</p>
+		
 		</div>
 		<div class="box shadow_17">
 				<p>模拟多层边框</p>渐变边框</p>
